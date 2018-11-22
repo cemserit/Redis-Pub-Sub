@@ -14,8 +14,9 @@ public class Publisher implements MessagePublisher {
     private final StringRedisTemplate stringRedisTemplate;
     private final ChannelTopic topic;
 
-    public Publisher(@Autowired StringRedisTemplate stringRedisTemplate,
-                     @Autowired ChannelTopic topic) {
+    @Autowired 
+    public Publisher(StringRedisTemplate stringRedisTemplate,
+                     ChannelTopic topic) {
         this.stringRedisTemplate = stringRedisTemplate;
         this.topic = topic;
     }
